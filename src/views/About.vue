@@ -1,20 +1,12 @@
 <template>
-
   <div class="card">
     <div class="card-header">
-        About
+      About
     </div>
     <div class="card-body">
-        <div class="about">
-          This is an about page
-        </div>
+      <div class="about">
+        <h1>This is an about page</h1>
+      </div>
     </div>
   </div>
-
 </template>
-
-<script>
-export default {
-  name:"About"
-}
-</script>

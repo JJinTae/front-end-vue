@@ -1,21 +1,27 @@
 <template>
-<div class="card">
+  <div class="card">
     <div class="card-header">
-        HelloWorld component
+      SubBComponent
     </div>
     <div class="card-body">
-      <div class="hello">
-        <h1>Welcome to Vue!</h1>
+
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-}
+    name : "",
+    components: {
+    },
+    data: () => ({
+
+    }),
+    methods: {
+    }
+};
 </script>
 
 <style scoped>
+
 </style>
