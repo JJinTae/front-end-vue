@@ -2,7 +2,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      Exam02View
+      <span class="title">Exam02View</span>
     </div>
     <div class="card-body">
       <sub-a-component />
@@ -24,7 +24,7 @@ export default {
   data: () => ({}),
   methods: {
     goUrl() {
-        this.$router.push("/menu01/exam02view").catch(()=>{});
+        this.$router.push("/menu01/exam01view").catch(()=>{});
         // 모든 component에서 this.$router를 통해 router의 정보를 얻을 수 있다. (내장 객체)
         // push() url 추가 후 이동 의미(promise 반환), 현재 url 입력시 오류 발생 => 해결을 위해 catch 작성을 통해 해결 .catch(()=>{});
     },

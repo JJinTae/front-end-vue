@@ -31,3 +31,9 @@ export default {
   components: { AppHeader, AppMenu },
 };
 </script>
+
+<style>
+  .title {
+    color: red;
+  }
+</style>
