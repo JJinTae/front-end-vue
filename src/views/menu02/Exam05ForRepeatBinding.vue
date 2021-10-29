@@ -7,7 +7,7 @@
     <div class="card-body">
       <h6>범위 반복</h6>
       <span v-for="n in 6" :key="n" class="mr-2">
-        <img :src="require(`@/assets/photos/photo${n}.jpg`)" height="100">
+        <img :src="require(`@/assets/photos/photo${n}.jpg`)" height="100" v-if="n%2===0" >
       </span>
 
       <hr>
@@ -15,7 +15,7 @@
       <h6>배열 항목 반복</h6>
       <div>
         <span v-for="(photo, index) in photos" :key="index">
-          <img :src="require(`@/assets/photos/${photo}`)" height="100">
+          <img :src="require(`@/assets/photos/${photo}`)" height="100" v-if="index<=2" >
         </span>
       </div>
 
@@ -47,6 +47,9 @@
 </template>
 
 <script>
+import boardData from "@/data/boardData"
+import photoData from '@/data/photoData';
+
 export default {
   // 컴포넌트의 대표이름(devtools에 나오는 이름)
   name: "Exam05ForRepeatBinding",
@@ -55,19 +58,8 @@ export default {
   // 컴포넌트 데이터 정의
   data() {
     return {
-      photos: ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
-      boards: [
-        {bno:1, btitle:"제목1", bwriter:"글쓴이1", bdate:"2021-08-07"},
-        {bno:2, btitle:"제목2", bwriter:"글쓴이2", bdate:"2021-08-08"},
-        {bno:3, btitle:"제목3", bwriter:"글쓴이3", bdate:"2021-08-09"}
-      ],
-      board: {
-        bno:4,
-        btitle: "제목4",
-        bcontent: "내용4",
-        bwriter: "글쓴이4",
-        bdate: "2021-08-10"
-      }
+      photos : photoData.photos,
+      boards : boardData.boards,
     };
   },
   // 컴포넌트 메소드 정의
